@@ -4,13 +4,13 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../ethernetServer.c 
+../ethernet_server.c 
 
 C_DEPS += \
-./ethernetServer.d 
+./ethernet_server.d 
 
 OBJS += \
-./ethernetServer.o 
+./ethernet_server.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -25,7 +25,7 @@ OBJS += \
 clean: clean--2e-
 
 clean--2e-:
-	-$(RM) ./ethernetServer.d ./ethernetServer.o
+	-$(RM) ./ethernet_server.d ./ethernet_server.o
 
 .PHONY: clean--2e-
 

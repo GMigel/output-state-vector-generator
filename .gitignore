@@ -1,4 +1,7 @@
 Debug/ethernetServer
+Debug/ethernet_server
+Debug/ethernet_server.d
+Debug/ethernet_server.o
 
 # Prerequisites
 *.d
