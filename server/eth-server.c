@@ -4,7 +4,7 @@
  Author      : Mike
  Version     :
  Copyright   : copyright notice
- Description : 
+ Description :
  ============================================================================
  */
 
@@ -16,7 +16,9 @@
 
 int main() {
 
-  char *ip = "127.0.0.1";
+  // char *ip = "127.0.0.1";
+  char *ip = "172.17.0.2";
+
   int port = 17300;
 
   int server_sock, client_sock;
