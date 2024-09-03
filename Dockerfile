@@ -7,7 +7,7 @@ WORKDIR /home/psi
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update
-RUN apt-get install -y wget make
+RUN apt-get install -y wget make nano
 #g++-arm-linux-gnueabihf
 
 RUN apt-get update && apt-get install -y locales && rm -rf /var/lib/apt/lists/* \
