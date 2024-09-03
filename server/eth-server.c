@@ -1,3 +1,13 @@
+/*
+ ============================================================================
+ Name        : ethernet_server.c
+ Author      : Mike
+ Version     :
+ Copyright   : copyright notice
+ Description : 
+ ============================================================================
+ */
+
 #include <arpa/inet.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -7,7 +17,7 @@
 int main() {
 
   char *ip = "127.0.0.1";
-  int port = 5566;
+  int port = 17300;
 
   int server_sock, client_sock;
   struct sockaddr_in server_addr, client_addr;
@@ -32,7 +42,7 @@ int main() {
     perror("[-]Bind error");
     exit(1);
   }
-  printf("[+]Bind to the port number: %d\n", port);
+  printf("[+]Bind to the port number: %s\t%d\n", ip, port);
 
   listen(server_sock, 5);
   printf("Listening...\n");
