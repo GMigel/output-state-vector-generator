@@ -7,7 +7,7 @@ WORKDIR /home/psi
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update
-RUN apt-get install -y wget make nano
+RUN apt-get install -y wget make nano ssh
 #g++-arm-linux-gnueabihf
 
 RUN apt-get update && apt-get install -y locales && rm -rf /var/lib/apt/lists/* \
@@ -22,8 +22,12 @@ RUN apt-get update && apt-get install -y \
 #    tmux htop 
 
 # Copy app to container
-COPY . /app
-WORKDIR /app
+# COPY . /app
+# WORKDIR /app
 
 # During debugging, this entry point will be overridden. For more information, please refer to https://aka.ms/vscode-docker-python-debug
-CMD ["bash"]
+
+# CMD ["bash"]
+CMD ["start.sh"]
+
+ENTRYPOINT service ssh restart && bash
