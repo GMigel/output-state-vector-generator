@@ -3,7 +3,7 @@ FROM i386/ubuntu:18.04
 # Disable Prompt During Packages Installation
 ARG DEBIAN_FRONTEND=noninteractive
 
-WORKDIR /home/psi
+# WORKDIR /home/psi
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update
@@ -23,7 +23,7 @@ RUN apt-get update && apt-get install -y \
 
 # Copy app to container
 # COPY . /app
-# WORKDIR /app
+WORKDIR /home/eth-server
 
 # During debugging, this entry point will be overridden. For more information, please refer to https://aka.ms/vscode-docker-python-debug
 
