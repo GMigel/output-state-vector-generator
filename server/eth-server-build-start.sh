@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd server
+# cd /home/eth-server/server
 make clean
 make
 ./eth-server
