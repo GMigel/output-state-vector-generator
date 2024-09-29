@@ -32,4 +32,4 @@ WORKDIR /home/output-state-vector-generator
 
 # CMD service ssh restart && bash
 # CMD service eth-server-startup.service restart && bash
-CMD bash
+CMD /bin/bash
